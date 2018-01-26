@@ -1,0 +1,859 @@
+fileFormatVersion: 2
+guid: b85e1e4cc83944732b1f1e8da74e8192
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: adipose
+    100002: anal_00
+    100004: body
+    100006: dorsal_back_00
+    100008: dorsal_center_00
+    100010: dorsal_center_01
+    100012: dorsal_front_00
+    100014: dorsal_front_01
+    100016: eye_left
+    100018: eye_right
+    100020: gills
+    100022: head
+    100024: jaw_bottom
+    100026: jaw_top
+    100028: LOD00
+    100030: mouth_left_00
+    100032: mouth_left_01
+    100034: mouth_right_00
+    100036: mouth_right_01
+    100038: pec_left
+    100040: pec_left_back_00
+    100042: pec_left_back_01
+    100044: pec_left_front_00
+    100046: pec_left_front_01
+    100048: pec_left_front_02
+    100050: pec_right
+    100052: pec_right_back_00
+    100054: pec_right_back_01
+    100056: pec_right_front_00
+    100058: pec_right_front_01
+    100060: pec_right_front_02
+    100062: pelvic_left_00
+    100064: pelvic_left_01
+    100066: pelvic_right_00
+    100068: pelvic_right_01
+    100070: root
+    100072: //RootNode
+    100074: spine_00
+    100076: spine_01
+    100078: spine_02
+    100080: spine_03
+    100082: spine_04
+    100084: tail
+    100086: tail_bottom_00
+    100088: tail_bottom_01
+    100090: tail_center_00
+    100092: tail_center_01
+    100094: tail_top_00
+    100096: tail_top_01
+    100098: Body_Geometry_Higher_Res
+    100100: coho_7x
+    100102: eyes
+    100104: teeth
+    400000: adipose
+    400002: anal_00
+    400004: body
+    400006: dorsal_back_00
+    400008: dorsal_center_00
+    400010: dorsal_center_01
+    400012: dorsal_front_00
+    400014: dorsal_front_01
+    400016: eye_left
+    400018: eye_right
+    400020: gills
+    400022: head
+    400024: jaw_bottom
+    400026: jaw_top
+    400028: LOD00
+    400030: mouth_left_00
+    400032: mouth_left_01
+    400034: mouth_right_00
+    400036: mouth_right_01
+    400038: pec_left
+    400040: pec_left_back_00
+    400042: pec_left_back_01
+    400044: pec_left_front_00
+    400046: pec_left_front_01
+    400048: pec_left_front_02
+    400050: pec_right
+    400052: pec_right_back_00
+    400054: pec_right_back_01
+    400056: pec_right_front_00
+    400058: pec_right_front_01
+    400060: pec_right_front_02
+    400062: pelvic_left_00
+    400064: pelvic_left_01
+    400066: pelvic_right_00
+    400068: pelvic_right_01
+    400070: root
+    400072: //RootNode
+    400074: spine_00
+    400076: spine_01
+    400078: spine_02
+    400080: spine_03
+    400082: spine_04
+    400084: tail
+    400086: tail_bottom_00
+    400088: tail_bottom_01
+    400090: tail_center_00
+    400092: tail_center_01
+    400094: tail_top_00
+    400096: tail_top_01
+    400098: Body_Geometry_Higher_Res
+    400100: coho_7x
+    400102: eyes
+    400104: teeth
+    2300000: coho_7x
+    2300002: eyes
+    2300004: teeth
+    3300000: coho_7x
+    3300002: eyes
+    3300004: teeth
+    4300000: LOD00
+    4300002: eyes
+    4300004: coho_7x
+    4300006: teeth
+    7400000: swim
+    7400002: headfake
+    7400004: rightturn
+    7400006: rtightturnEND
+    7400008: leftturn
+    9500000: //RootNode
+    11100000: //RootNode
+    13700000: LOD00
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 3
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: swim
+      takeName: Take 001
+      firstFrame: 180
+      lastFrame: 239
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: LOD00
+        weight: 1
+      - path: root
+        weight: 1
+      - path: root/body
+        weight: 1
+      - path: root/body/gills
+        weight: 1
+      - path: root/body/head
+        weight: 1
+      - path: root/body/head/eye_left
+        weight: 1
+      - path: root/body/head/eye_right
+        weight: 1
+      - path: root/body/head/jaw_bottom
+        weight: 1
+      - path: root/body/head/jaw_top
+        weight: 1
+      - path: root/body/head/jaw_top/mouth_left_00
+        weight: 1
+      - path: root/body/head/jaw_top/mouth_left_00/mouth_left_01
+        weight: 1
+      - path: root/body/head/jaw_top/mouth_right_00
+        weight: 1
+      - path: root/body/head/jaw_top/mouth_right_00/mouth_right_01
+        weight: 1
+      - path: root/body/pec_left
+        weight: 1
+      - path: root/body/pec_left/pec_left_back_00
+        weight: 1
+      - path: root/body/pec_left/pec_left_back_00/pec_left_back_01
+        weight: 1
+      - path: root/body/pec_left/pec_left_front_00
+        weight: 1
+      - path: root/body/pec_left/pec_left_front_00/pec_left_front_01
+        weight: 1
+      - path: root/body/pec_left/pec_left_front_00/pec_left_front_01/pec_left_front_02
+        weight: 1
+      - path: root/body/pec_right
+        weight: 1
+      - path: root/body/pec_right/pec_right_back_00
+        weight: 1
+      - path: root/body/pec_right/pec_right_back_00/pec_right_back_01
+        weight: 1
+      - path: root/body/pec_right/pec_right_front_00
+        weight: 1
+      - path: root/body/pec_right/pec_right_front_00/pec_right_front_01
+        weight: 1
+      - path: root/body/pec_right/pec_right_front_00/pec_right_front_01/pec_right_front_02
+        weight: 1
+      - path: root/body/spine_00
+        weight: 1
+      - path: root/body/spine_00/spine_01
+        weight: 1
+      - path: root/body/spine_00/spine_01/spine_02
+        weight: 1
+      - path: root/body/spine_00/spine_01/spine_02/dorsal_back_00
+        weight: 1
+      - path: root/body/spine_00/spine_01/spine_02/dorsal_center_00
+        weight: 1
+      - path: root/body/spine_00/spine_01/spine_02/dorsal_center_00/dorsal_center_01
+        weight: 1
+      - path: root/body/spine_00/spine_01/spine_02/dorsal_front_00
+        weight: 1
+      - path: root/body/spine_00/spine_01/spine_02/dorsal_front_00/dorsal_front_01
+        weight: 1
+      - path: root/body/spine_00/spine_01/spine_02/pelvic_left_00
+        weight: 1
+      - path: root/body/spine_00/spine_01/spine_02/pelvic_left_00/pelvic_left_01
+        weight: 1
+      - path: root/body/spine_00/spine_01/spine_02/pelvic_right_00
+        weight: 1
+      - path: root/body/spine_00/spine_01/spine_02/pelvic_right_00/pelvic_right_01
+        weight: 1
+      - path: root/body/spine_00/spine_01/spine_02/spine_03
+        weight: 1
+      - path: root/body/spine_00/spine_01/spine_02/spine_03/anal_00
+        weight: 1
+      - path: root/body/spine_00/spine_01/spine_02/spine_03/spine_04
+        weight: 1
+      - path: root/body/spine_00/spine_01/spine_02/spine_03/spine_04/adipose
+        weight: 1
+      - path: root/body/spine_00/spine_01/spine_02/spine_03/spine_04/tail
+        weight: 1
+      - path: root/body/spine_00/spine_01/spine_02/spine_03/spine_04/tail/tail_center_00
+        weight: 1
+      - path: root/body/spine_00/spine_01/spine_02/spine_03/spine_04/tail/tail_center_00/tail_bottom_00
+        weight: 1
+      - path: root/body/spine_00/spine_01/spine_02/spine_03/spine_04/tail/tail_center_00/tail_bottom_00/tail_bottom_01
+        weight: 1
+      - path: root/body/spine_00/spine_01/spine_02/spine_03/spine_04/tail/tail_center_00/tail_center_01
+        weight: 1
+      - path: root/body/spine_00/spine_01/spine_02/spine_03/spine_04/tail/tail_center_00/tail_top_00
+        weight: 1
+      - path: root/body/spine_00/spine_01/spine_02/spine_03/spine_04/tail/tail_center_00/tail_top_00/tail_top_01
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: headfake
+      takeName: Take 001
+      firstFrame: 50
+      lastFrame: 79
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: LOD00
+        weight: 1
+      - path: root
+        weight: 1
+      - path: root/body
+        weight: 1
+      - path: root/body/gills
+        weight: 1
+      - path: root/body/head
+        weight: 1
+      - path: root/body/head/eye_left
+        weight: 1
+      - path: root/body/head/eye_right
+        weight: 1
+      - path: root/body/head/jaw_bottom
+        weight: 1
+      - path: root/body/head/jaw_top
+        weight: 1
+      - path: root/body/head/jaw_top/mouth_left_00
+        weight: 1
+      - path: root/body/head/jaw_top/mouth_left_00/mouth_left_01
+        weight: 1
+      - path: root/body/head/jaw_top/mouth_right_00
+        weight: 1
+      - path: root/body/head/jaw_top/mouth_right_00/mouth_right_01
+        weight: 1
+      - path: root/body/pec_left
+        weight: 1
+      - path: root/body/pec_left/pec_left_back_00
+        weight: 1
+      - path: root/body/pec_left/pec_left_back_00/pec_left_back_01
+        weight: 1
+      - path: root/body/pec_left/pec_left_front_00
+        weight: 1
+      - path: root/body/pec_left/pec_left_front_00/pec_left_front_01
+        weight: 1
+      - path: root/body/pec_left/pec_left_front_00/pec_left_front_01/pec_left_front_02
+        weight: 1
+      - path: root/body/pec_right
+        weight: 1
+      - path: root/body/pec_right/pec_right_back_00
+        weight: 1
+      - path: root/body/pec_right/pec_right_back_00/pec_right_back_01
+        weight: 1
+      - path: root/body/pec_right/pec_right_front_00
+        weight: 1
+      - path: root/body/pec_right/pec_right_front_00/pec_right_front_01
+        weight: 1
+      - path: root/body/pec_right/pec_right_front_00/pec_right_front_01/pec_right_front_02
+        weight: 1
+      - path: root/body/spine_00
+        weight: 1
+      - path: root/body/spine_00/spine_01
+        weight: 1
+      - path: root/body/spine_00/spine_01/spine_02
+        weight: 1
+      - path: root/body/spine_00/spine_01/spine_02/dorsal_back_00
+        weight: 1
+      - path: root/body/spine_00/spine_01/spine_02/dorsal_center_00
+        weight: 1
+      - path: root/body/spine_00/spine_01/spine_02/dorsal_center_00/dorsal_center_01
+        weight: 1
+      - path: root/body/spine_00/spine_01/spine_02/dorsal_front_00
+        weight: 1
+      - path: root/body/spine_00/spine_01/spine_02/dorsal_front_00/dorsal_front_01
+        weight: 1
+      - path: root/body/spine_00/spine_01/spine_02/pelvic_left_00
+        weight: 1
+      - path: root/body/spine_00/spine_01/spine_02/pelvic_left_00/pelvic_left_01
+        weight: 1
+      - path: root/body/spine_00/spine_01/spine_02/pelvic_right_00
+        weight: 1
+      - path: root/body/spine_00/spine_01/spine_02/pelvic_right_00/pelvic_right_01
+        weight: 1
+      - path: root/body/spine_00/spine_01/spine_02/spine_03
+        weight: 1
+      - path: root/body/spine_00/spine_01/spine_02/spine_03/anal_00
+        weight: 1
+      - path: root/body/spine_00/spine_01/spine_02/spine_03/spine_04
+        weight: 1
+      - path: root/body/spine_00/spine_01/spine_02/spine_03/spine_04/adipose
+        weight: 1
+      - path: root/body/spine_00/spine_01/spine_02/spine_03/spine_04/tail
+        weight: 1
+      - path: root/body/spine_00/spine_01/spine_02/spine_03/spine_04/tail/tail_center_00
+        weight: 1
+      - path: root/body/spine_00/spine_01/spine_02/spine_03/spine_04/tail/tail_center_00/tail_bottom_00
+        weight: 1
+      - path: root/body/spine_00/spine_01/spine_02/spine_03/spine_04/tail/tail_center_00/tail_bottom_00/tail_bottom_01
+        weight: 1
+      - path: root/body/spine_00/spine_01/spine_02/spine_03/spine_04/tail/tail_center_00/tail_center_01
+        weight: 1
+      - path: root/body/spine_00/spine_01/spine_02/spine_03/spine_04/tail/tail_center_00/tail_top_00
+        weight: 1
+      - path: root/body/spine_00/spine_01/spine_02/spine_03/spine_04/tail/tail_center_00/tail_top_00/tail_top_01
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: rightturn
+      takeName: Take 001
+      firstFrame: 240
+      lastFrame: 269
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves:
+      - name: dragAmount
+        curve:
+          serializedVersion: 2
+          curve:
+          - time: 0
+            value: 0
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+          - time: 1
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+          preInfinity: 2
+          postInfinity: 2
+      - name: turnAmount
+        curve:
+          serializedVersion: 2
+          curve:
+          - time: 0
+            value: 0
+            inSlope: 1
+            outSlope: 1
+            tangentMode: 10
+          - time: 1
+            value: 1
+            inSlope: 1
+            outSlope: 1
+            tangentMode: 10
+          preInfinity: 2
+          postInfinity: 0
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: LOD00
+        weight: 1
+      - path: root
+        weight: 1
+      - path: root/body
+        weight: 1
+      - path: root/body/gills
+        weight: 1
+      - path: root/body/head
+        weight: 1
+      - path: root/body/head/eye_left
+        weight: 1
+      - path: root/body/head/eye_right
+        weight: 1
+      - path: root/body/head/jaw_bottom
+        weight: 1
+      - path: root/body/head/jaw_top
+        weight: 1
+      - path: root/body/head/jaw_top/mouth_left_00
+        weight: 1
+      - path: root/body/head/jaw_top/mouth_left_00/mouth_left_01
+        weight: 1
+      - path: root/body/head/jaw_top/mouth_right_00
+        weight: 1
+      - path: root/body/head/jaw_top/mouth_right_00/mouth_right_01
+        weight: 1
+      - path: root/body/pec_left
+        weight: 1
+      - path: root/body/pec_left/pec_left_back_00
+        weight: 1
+      - path: root/body/pec_left/pec_left_back_00/pec_left_back_01
+        weight: 1
+      - path: root/body/pec_left/pec_left_front_00
+        weight: 1
+      - path: root/body/pec_left/pec_left_front_00/pec_left_front_01
+        weight: 1
+      - path: root/body/pec_left/pec_left_front_00/pec_left_front_01/pec_left_front_02
+        weight: 1
+      - path: root/body/pec_right
+        weight: 1
+      - path: root/body/pec_right/pec_right_back_00
+        weight: 1
+      - path: root/body/pec_right/pec_right_back_00/pec_right_back_01
+        weight: 1
+      - path: root/body/pec_right/pec_right_front_00
+        weight: 1
+      - path: root/body/pec_right/pec_right_front_00/pec_right_front_01
+        weight: 1
+      - path: root/body/pec_right/pec_right_front_00/pec_right_front_01/pec_right_front_02
+        weight: 1
+      - path: root/body/spine_00
+        weight: 1
+      - path: root/body/spine_00/spine_01
+        weight: 1
+      - path: root/body/spine_00/spine_01/spine_02
+        weight: 1
+      - path: root/body/spine_00/spine_01/spine_02/dorsal_back_00
+        weight: 1
+      - path: root/body/spine_00/spine_01/spine_02/dorsal_center_00
+        weight: 1
+      - path: root/body/spine_00/spine_01/spine_02/dorsal_center_00/dorsal_center_01
+        weight: 1
+      - path: root/body/spine_00/spine_01/spine_02/dorsal_front_00
+        weight: 1
+      - path: root/body/spine_00/spine_01/spine_02/dorsal_front_00/dorsal_front_01
+        weight: 1
+      - path: root/body/spine_00/spine_01/spine_02/pelvic_left_00
+        weight: 1
+      - path: root/body/spine_00/spine_01/spine_02/pelvic_left_00/pelvic_left_01
+        weight: 1
+      - path: root/body/spine_00/spine_01/spine_02/pelvic_right_00
+        weight: 1
+      - path: root/body/spine_00/spine_01/spine_02/pelvic_right_00/pelvic_right_01
+        weight: 1
+      - path: root/body/spine_00/spine_01/spine_02/spine_03
+        weight: 1
+      - path: root/body/spine_00/spine_01/spine_02/spine_03/anal_00
+        weight: 1
+      - path: root/body/spine_00/spine_01/spine_02/spine_03/spine_04
+        weight: 1
+      - path: root/body/spine_00/spine_01/spine_02/spine_03/spine_04/adipose
+        weight: 1
+      - path: root/body/spine_00/spine_01/spine_02/spine_03/spine_04/tail
+        weight: 1
+      - path: root/body/spine_00/spine_01/spine_02/spine_03/spine_04/tail/tail_center_00
+        weight: 1
+      - path: root/body/spine_00/spine_01/spine_02/spine_03/spine_04/tail/tail_center_00/tail_bottom_00
+        weight: 1
+      - path: root/body/spine_00/spine_01/spine_02/spine_03/spine_04/tail/tail_center_00/tail_bottom_00/tail_bottom_01
+        weight: 1
+      - path: root/body/spine_00/spine_01/spine_02/spine_03/spine_04/tail/tail_center_00/tail_center_01
+        weight: 1
+      - path: root/body/spine_00/spine_01/spine_02/spine_03/spine_04/tail/tail_center_00/tail_top_00
+        weight: 1
+      - path: root/body/spine_00/spine_01/spine_02/spine_03/spine_04/tail/tail_center_00/tail_top_00/tail_top_01
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: rtightturnEND
+      takeName: Take 001
+      firstFrame: 269
+      lastFrame: 270
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: LOD00
+        weight: 1
+      - path: root
+        weight: 1
+      - path: root/body
+        weight: 1
+      - path: root/body/gills
+        weight: 1
+      - path: root/body/head
+        weight: 1
+      - path: root/body/head/eye_left
+        weight: 1
+      - path: root/body/head/eye_right
+        weight: 1
+      - path: root/body/head/jaw_bottom
+        weight: 1
+      - path: root/body/head/jaw_top
+        weight: 1
+      - path: root/body/head/jaw_top/mouth_left_00
+        weight: 1
+      - path: root/body/head/jaw_top/mouth_left_00/mouth_left_01
+        weight: 1
+      - path: root/body/head/jaw_top/mouth_right_00
+        weight: 1
+      - path: root/body/head/jaw_top/mouth_right_00/mouth_right_01
+        weight: 1
+      - path: root/body/pec_left
+        weight: 1
+      - path: root/body/pec_left/pec_left_back_00
+        weight: 1
+      - path: root/body/pec_left/pec_left_back_00/pec_left_back_01
+        weight: 1
+      - path: root/body/pec_left/pec_left_front_00
+        weight: 1
+      - path: root/body/pec_left/pec_left_front_00/pec_left_front_01
+        weight: 1
+      - path: root/body/pec_left/pec_left_front_00/pec_left_front_01/pec_left_front_02
+        weight: 1
+      - path: root/body/pec_right
+        weight: 1
+      - path: root/body/pec_right/pec_right_back_00
+        weight: 1
+      - path: root/body/pec_right/pec_right_back_00/pec_right_back_01
+        weight: 1
+      - path: root/body/pec_right/pec_right_front_00
+        weight: 1
+      - path: root/body/pec_right/pec_right_front_00/pec_right_front_01
+        weight: 1
+      - path: root/body/pec_right/pec_right_front_00/pec_right_front_01/pec_right_front_02
+        weight: 1
+      - path: root/body/spine_00
+        weight: 1
+      - path: root/body/spine_00/spine_01
+        weight: 1
+      - path: root/body/spine_00/spine_01/spine_02
+        weight: 1
+      - path: root/body/spine_00/spine_01/spine_02/dorsal_back_00
+        weight: 1
+      - path: root/body/spine_00/spine_01/spine_02/dorsal_center_00
+        weight: 1
+      - path: root/body/spine_00/spine_01/spine_02/dorsal_center_00/dorsal_center_01
+        weight: 1
+      - path: root/body/spine_00/spine_01/spine_02/dorsal_front_00
+        weight: 1
+      - path: root/body/spine_00/spine_01/spine_02/dorsal_front_00/dorsal_front_01
+        weight: 1
+      - path: root/body/spine_00/spine_01/spine_02/pelvic_left_00
+        weight: 1
+      - path: root/body/spine_00/spine_01/spine_02/pelvic_left_00/pelvic_left_01
+        weight: 1
+      - path: root/body/spine_00/spine_01/spine_02/pelvic_right_00
+        weight: 1
+      - path: root/body/spine_00/spine_01/spine_02/pelvic_right_00/pelvic_right_01
+        weight: 1
+      - path: root/body/spine_00/spine_01/spine_02/spine_03
+        weight: 1
+      - path: root/body/spine_00/spine_01/spine_02/spine_03/anal_00
+        weight: 1
+      - path: root/body/spine_00/spine_01/spine_02/spine_03/spine_04
+        weight: 1
+      - path: root/body/spine_00/spine_01/spine_02/spine_03/spine_04/adipose
+        weight: 1
+      - path: root/body/spine_00/spine_01/spine_02/spine_03/spine_04/tail
+        weight: 1
+      - path: root/body/spine_00/spine_01/spine_02/spine_03/spine_04/tail/tail_center_00
+        weight: 1
+      - path: root/body/spine_00/spine_01/spine_02/spine_03/spine_04/tail/tail_center_00/tail_bottom_00
+        weight: 1
+      - path: root/body/spine_00/spine_01/spine_02/spine_03/spine_04/tail/tail_center_00/tail_bottom_00/tail_bottom_01
+        weight: 1
+      - path: root/body/spine_00/spine_01/spine_02/spine_03/spine_04/tail/tail_center_00/tail_center_01
+        weight: 1
+      - path: root/body/spine_00/spine_01/spine_02/spine_03/spine_04/tail/tail_center_00/tail_top_00
+        weight: 1
+      - path: root/body/spine_00/spine_01/spine_02/spine_03/spine_04/tail/tail_center_00/tail_top_00/tail_top_01
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: leftturn
+      takeName: Take 001
+      firstFrame: 300
+      lastFrame: 329
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves:
+      - name: turnAmount
+        curve:
+          serializedVersion: 2
+          curve:
+          - time: 0
+            value: 0
+            inSlope: 1
+            outSlope: 1
+            tangentMode: 10
+          - time: 1
+            value: 1
+            inSlope: 1
+            outSlope: 1
+            tangentMode: 10
+          preInfinity: 2
+          postInfinity: 0
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: LOD00
+        weight: 1
+      - path: root
+        weight: 1
+      - path: root/body
+        weight: 1
+      - path: root/body/gills
+        weight: 1
+      - path: root/body/head
+        weight: 1
+      - path: root/body/head/eye_left
+        weight: 1
+      - path: root/body/head/eye_right
+        weight: 1
+      - path: root/body/head/jaw_bottom
+        weight: 1
+      - path: root/body/head/jaw_top
+        weight: 1
+      - path: root/body/head/jaw_top/mouth_left_00
+        weight: 1
+      - path: root/body/head/jaw_top/mouth_left_00/mouth_left_01
+        weight: 1
+      - path: root/body/head/jaw_top/mouth_right_00
+        weight: 1
+      - path: root/body/head/jaw_top/mouth_right_00/mouth_right_01
+        weight: 1
+      - path: root/body/pec_left
+        weight: 1
+      - path: root/body/pec_left/pec_left_back_00
+        weight: 1
+      - path: root/body/pec_left/pec_left_back_00/pec_left_back_01
+        weight: 1
+      - path: root/body/pec_left/pec_left_front_00
+        weight: 1
+      - path: root/body/pec_left/pec_left_front_00/pec_left_front_01
+        weight: 1
+      - path: root/body/pec_left/pec_left_front_00/pec_left_front_01/pec_left_front_02
+        weight: 1
+      - path: root/body/pec_right
+        weight: 1
+      - path: root/body/pec_right/pec_right_back_00
+        weight: 1
+      - path: root/body/pec_right/pec_right_back_00/pec_right_back_01
+        weight: 1
+      - path: root/body/pec_right/pec_right_front_00
+        weight: 1
+      - path: root/body/pec_right/pec_right_front_00/pec_right_front_01
+        weight: 1
+      - path: root/body/pec_right/pec_right_front_00/pec_right_front_01/pec_right_front_02
+        weight: 1
+      - path: root/body/spine_00
+        weight: 1
+      - path: root/body/spine_00/spine_01
+        weight: 1
+      - path: root/body/spine_00/spine_01/spine_02
+        weight: 1
+      - path: root/body/spine_00/spine_01/spine_02/dorsal_back_00
+        weight: 1
+      - path: root/body/spine_00/spine_01/spine_02/dorsal_center_00
+        weight: 1
+      - path: root/body/spine_00/spine_01/spine_02/dorsal_center_00/dorsal_center_01
+        weight: 1
+      - path: root/body/spine_00/spine_01/spine_02/dorsal_front_00
+        weight: 1
+      - path: root/body/spine_00/spine_01/spine_02/dorsal_front_00/dorsal_front_01
+        weight: 1
+      - path: root/body/spine_00/spine_01/spine_02/pelvic_left_00
+        weight: 1
+      - path: root/body/spine_00/spine_01/spine_02/pelvic_left_00/pelvic_left_01
+        weight: 1
+      - path: root/body/spine_00/spine_01/spine_02/pelvic_right_00
+        weight: 1
+      - path: root/body/spine_00/spine_01/spine_02/pelvic_right_00/pelvic_right_01
+        weight: 1
+      - path: root/body/spine_00/spine_01/spine_02/spine_03
+        weight: 1
+      - path: root/body/spine_00/spine_01/spine_02/spine_03/anal_00
+        weight: 1
+      - path: root/body/spine_00/spine_01/spine_02/spine_03/spine_04
+        weight: 1
+      - path: root/body/spine_00/spine_01/spine_02/spine_03/spine_04/adipose
+        weight: 1
+      - path: root/body/spine_00/spine_01/spine_02/spine_03/spine_04/tail
+        weight: 1
+      - path: root/body/spine_00/spine_01/spine_02/spine_03/spine_04/tail/tail_center_00
+        weight: 1
+      - path: root/body/spine_00/spine_01/spine_02/spine_03/spine_04/tail/tail_center_00/tail_bottom_00
+        weight: 1
+      - path: root/body/spine_00/spine_01/spine_02/spine_03/spine_04/tail/tail_center_00/tail_bottom_00/tail_bottom_01
+        weight: 1
+      - path: root/body/spine_00/spine_01/spine_02/spine_03/spine_04/tail/tail_center_00/tail_center_01
+        weight: 1
+      - path: root/body/spine_00/spine_01/spine_02/spine_03/spine_04/tail/tail_center_00/tail_top_00
+        weight: 1
+      - path: root/body/spine_00/spine_01/spine_02/spine_03/spine_04/tail/tail_center_00/tail_top_00/tail_top_01
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .0179999992
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: root
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
