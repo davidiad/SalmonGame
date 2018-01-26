@@ -9,12 +9,12 @@ public class JumpTrigger2 : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        // Set the next waypoint
-        npf = other.transform.parent.GetComponent<NPFish>();
-
+        if (other.CompareTag("NPFish")) 
+        {
+            // Set the next waypoint
+            npf = other.transform.parent.GetComponent<NPFish>();
             npf.target = npf.RandomizePosition(nextTarget); // set the colliding fish's  new target
-       
-
+        }
     }
 
 }
