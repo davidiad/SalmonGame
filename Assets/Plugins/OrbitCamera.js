@@ -60,7 +60,7 @@ function Start () {
 /*
 function LateUpdate () {
 	//Underwater();
-	
+	Debug.Log("AM I GETTING CALLED FIRST OR SECOND?");
     if (target) {
     	
     	//if (Input.GetAxis("Horizontal")) {
@@ -125,6 +125,7 @@ static function ClampAngle (angle : float, min : float, max : float) {
 }
 
 function LateUpdate () {
+Debug.Log("AM I GETTING CALLED?");
 	if (transform.position.y > 15.0) {
 		fog.SetActive (false);
 	} else {

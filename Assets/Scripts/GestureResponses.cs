@@ -123,7 +123,7 @@ public class GestureResponses : MonoBehaviour {
 
 	void OnTwist(TwistGesture gesture) { 
 		CameraDummy.transform.Rotate(0.0f, gesture.DeltaRotation, 0.0f);
-		OrbitCamera.targetOffset = new Vector3(CameraDummyChild.transform.position.x, 0.15f, CameraDummyChild.transform.position.z);/* your code here */ 
+		OrbitCamera.targetOffset = new Vector3(CameraDummyChild.transform.position.x, 0.15f, CameraDummyChild.transform.position.z); 
 	}
 	
 	// Direct user control of the fish's direction, for when the GO isKinematic
