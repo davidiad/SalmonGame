@@ -5,7 +5,7 @@ using UnityEngine;
 public class FollowCamera : MonoBehaviour {
 
     //public Transform target;
-    public Vector3 targetOffset = new Vector3(0.6f, 0.3f, -0.8f); // used in GestureResponses.cs
+    public Vector3 targetOffset;// = new Vector3(0.6f, 0.3f, -0.8f); // used in GestureResponses.cs
     //public float distance = 4.0f;
 
     //public LayerMask lineOfSightMask = 0;
@@ -30,7 +30,7 @@ public class FollowCamera : MonoBehaviour {
     {
         fish = GameObject.FindGameObjectWithTag("Fishy");
         camParent = GameObject.FindGameObjectWithTag("CamParent");
-
+        targetOffset = transform.localPosition;
         //x = transform.eulerAngles.y;
         //y = transform.eulerAngles.x;
         //currentDistance = distance;
@@ -44,6 +44,11 @@ public class FollowCamera : MonoBehaviour {
     private void LateUpdate()
     {
         SlerpCamera();
+    }
+
+    public void UpdateTargetOffset()
+    {
+        transform.localPosition = targetOffset;
     }
 
     // Rotate camera slowly to follow fish as it moves

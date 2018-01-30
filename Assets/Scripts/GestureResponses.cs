@@ -22,14 +22,18 @@ public class GestureResponses : MonoBehaviour {
     private Rigidbody rb;
 	private float _cumulativeDragAmount;
 	private float _waterlevel;
+    private FollowCamera followCamera;
+    private float camY;
 
     void Start()
     {
         animator = GO.GetComponent<Animator>();
         rb = GO.GetComponent<Rigidbody>();
         fishManager = GO.GetComponent<FishManager>();
+        followCamera = mainCam.GetComponent<FollowCamera>();
         _waterlevel = fishManager.waterlevel;
         _cumulativeDragAmount = fishManager.cumulativeDragAmount;
+        camY = mainCam.transform.localPosition.y;
     }
 
     void OnTap( TapGesture gesture ) { 
@@ -121,10 +125,19 @@ public class GestureResponses : MonoBehaviour {
     	}*/
 	}
 
-	void OnTwist(TwistGesture gesture) { 
-		CameraDummy.transform.Rotate(0.0f, gesture.DeltaRotation, 0.0f);
-		OrbitCamera.targetOffset = new Vector3(CameraDummyChild.transform.position.x, 0.15f, CameraDummyChild.transform.position.z); 
+	void OnTwist(TwistGesture gesture) {
+        if (gesture.Position.y <= (Screen.height * 0.845f))
+        {
+            CameraDummy.transform.Rotate(0.0f, gesture.DeltaRotation, 0.0f);
+            UpdateTargetOffset();
+        }
 	}
+
+    private void UpdateTargetOffset()
+    {
+        followCamera.targetOffset = CameraDummyChild.transform.position - CameraDummy.transform.position;
+        followCamera.UpdateTargetOffset();
+    }
 	
 	// Direct user control of the fish's direction, for when the GO isKinematic
     void OnDrag( DragGesture gesture ) { // drag anywhere on the screen, unless on the cam dummy to move the camera position
@@ -147,7 +160,7 @@ public class GestureResponses : MonoBehaviour {
 		// drag rotates dummy camera
 		if (gesture.Position.y > (Screen.height * 0.845f)) {
 			CameraDummy.transform.Rotate(0.0f, 2.0f * dragSpeed * gesture.DeltaMove.x, 0.0f);
-			OrbitCamera.targetOffset = new Vector3(CameraDummyChild.transform.position.x, 0.15f, CameraDummyChild.transform.position.z);
+            UpdateTargetOffset();
 		}
 		// drag is happening above the botton area reserved for UX. Therefore, turning can happen
 		else if ( gesture.Position.y > (Screen.height * 0.1f) && GO.GetComponent<Rigidbody>().isKinematic) {
