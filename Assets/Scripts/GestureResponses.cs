@@ -12,6 +12,8 @@ public class GestureResponses : MonoBehaviour {
 	public GameObject Waterplane;
 	public Camera mainCam;
 	public float dragSpeed = 0.3f;
+    public float verticalDragSpeed = 0.02f;
+    public float zoomSpeed = 0.1f;
 	//public float jumpForce = 1050.0f;
 	// The rotational angles of the fish. (The Z angle (banking) will stay at 0 at this point, so it doesn't need a variable)
 	float yangle = 0.0f;
@@ -24,6 +26,7 @@ public class GestureResponses : MonoBehaviour {
 	private float _waterlevel;
     private FollowCamera followCamera;
     private float camY;
+    private bool twisting; // a twist gesture is happening (don't allow pinch)
 
     void Start()
     {
@@ -34,6 +37,7 @@ public class GestureResponses : MonoBehaviour {
         _waterlevel = fishManager.waterlevel;
         _cumulativeDragAmount = fishManager.cumulativeDragAmount;
         camY = mainCam.transform.localPosition.y;
+        twisting = false;
     }
 
     void OnTap( TapGesture gesture ) { 
@@ -126,10 +130,22 @@ public class GestureResponses : MonoBehaviour {
 	}
 
 	void OnTwist(TwistGesture gesture) {
+
+        ContinuousGesturePhase phase = gesture.Phase;
+
+        if (phase == ContinuousGesturePhase.Started) {
+            twisting = true;
+        }
+
         if (gesture.Position.y <= (Screen.height * 0.845f))
         {
             CameraDummy.transform.Rotate(0.0f, gesture.DeltaRotation, 0.0f);
             UpdateTargetOffset();
+        }
+
+        if (phase == ContinuousGesturePhase.Ended)
+        {
+            twisting = false;
         }
 	}
 
@@ -142,12 +158,17 @@ public class GestureResponses : MonoBehaviour {
 	// Direct user control of the fish's direction, for when the GO isKinematic
     void OnDrag( DragGesture gesture ) { // drag anywhere on the screen, unless on the cam dummy to move the camera position
 
+        ContinuousGesturePhase phase = gesture.Phase;
+        animator.SetBool("dragging", true);
 
+        bool dragIsHorizontal = false;
+        bool dragIsVertical = false;
 
-		ContinuousGesturePhase phase = gesture.Phase;
-
-			animator.SetBool ("dragging", true);
-
+        if ( Mathf.Abs(gesture.DeltaMove.x) > Mathf.Abs(gesture.DeltaMove.y) ) {
+            dragIsHorizontal = true;
+        } else {
+            dragIsVertical = true;
+        }
 
 //		if (phase == ContinuousGesturePhase.Ended) 
 //		{
@@ -157,14 +178,22 @@ public class GestureResponses : MonoBehaviour {
 //			GO.GetComponent<Rigidbody>().transform.Rotate(0.0f, 35.0f, 0.0f);
 //		}
 
-		// drag rotates dummy camera
+		// drag is happening in top area, where the user can rotate the camera using the dummy camera
 		if (gesture.Position.y > (Screen.height * 0.845f)) {
 			CameraDummy.transform.Rotate(0.0f, 2.0f * dragSpeed * gesture.DeltaMove.x, 0.0f);
+            if (dragIsVertical)
+            {
+                // let user raise or lower the camera relative to the target
+                // TODO: Set limits for the amount up or down the camera is allowed to go
+                // TODO: UI to indicate camera height, and a way to return to default.
+                CameraDummyChild.transform.position = new Vector3(CameraDummyChild.transform.position.x, CameraDummyChild.transform.position.y + verticalDragSpeed * gesture.DeltaMove.y, CameraDummyChild.transform.position.z);
+            }
             UpdateTargetOffset();
+
 		}
 		// drag is happening above the botton area reserved for UX. Therefore, turning can happen
 		else if ( gesture.Position.y > (Screen.height * 0.1f) && GO.GetComponent<Rigidbody>().isKinematic) {
-			FSMFishController fishController  = GO.GetComponent<FSMFishController>();
+			// FSMFishController fishController  = GO.GetComponent<FSMFishController>();
 
             // if the animator is in seesObstacle state, if the user forces the fish to turn (via this function)
             // turn off auto-turning by moving to seesObstacleNoTurningAllowed state. That way, the fish is allowed 
@@ -177,16 +206,10 @@ public class GestureResponses : MonoBehaviour {
 			animator.SetBool("gotoTurnState", true);
 			//fishController.turnIsComplete = true; // if a drag to turn is started, it should cancel any automated turning by returning to the SwimState
 
-			// Drag is horizontal
-			if ( Mathf.Abs(gesture.DeltaMove.y) <= Mathf.Abs(gesture.DeltaMove.x) ) {
+            if (dragIsHorizontal) {
 				_cumulativeDragAmount += dragSpeed * gesture.DeltaMove.x;
                 fishManager.cumulativeDragAmount = _cumulativeDragAmount;
-				//Debug.Log("dcumulativeDragAmount: " + cumulativeDragAmount);
-
-				//animator.SetBool("dragging", true);
-				//if (cumulativeDragAmount > 0) {
-					GO.GetComponent<Rigidbody>().transform.Rotate(0.0f, -dragSpeed * gesture.DeltaMove.x, 0.0f); // using quaternions for accurate rotation
-				//}
+					GO.GetComponent<Rigidbody>().transform.Rotate(0.0f, -dragSpeed * gesture.DeltaMove.x, 0.0f);
 				if (gesture.DeltaMove.x < 0) {
 					animator.SetBool("turnL", false);
 					animator.SetBool("turnR", true);
@@ -198,10 +221,7 @@ public class GestureResponses : MonoBehaviour {
 					//animator.SetBool("turnR", false);
 				}
 
-				//Debug.Log ("What is DX?? :" + gesture.DeltaMove.x);
-
-			// Drag is vertical
-			} else if ( Mathf.Abs(gesture.DeltaMove.y) > Mathf.Abs(gesture.DeltaMove.x) ) {
+            } else if (dragIsVertical) {
 				animator.SetBool("turnL", false);
 				animator.SetBool("turnR", false);
 				float rotateAmount = dragSpeed * gesture.DeltaMove.y;
@@ -222,17 +242,16 @@ public class GestureResponses : MonoBehaviour {
             fishManager.cumulativeDragAmount = 0.0f;
 		}
 	}
-	/*
+
+	
 	void OnPinch(PinchGesture gesture) {
-		float fov;
-		float delta = gesture.Delta;
-		if (mainCam.fieldOfView <= 130.0f && mainCam.fieldOfView >= 30.0f) {
-			fov = 0.005f * delta;
-		} else {
-			delta = 0.0f;
-		}
-		mainCam.fieldOfView += delta;
-		if (mainCam.fieldOfView < 30.0f) {mainCam.fieldOfView = 30.0f;}
-		if (mainCam.fieldOfView > 130.0f) {mainCam.fieldOfView = 130.0f;}
-	}*/
+
+        if (!twisting)
+        {
+            float delta = gesture.Delta;
+            mainCam.fieldOfView += delta * zoomSpeed;
+            if (mainCam.fieldOfView < 30.0f) { mainCam.fieldOfView = 30.0f; }
+            if (mainCam.fieldOfView > 130.0f) { mainCam.fieldOfView = 130.0f; }
+        }
+	}
 }
