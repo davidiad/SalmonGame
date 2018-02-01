@@ -17,6 +17,7 @@ TagManager:
   - NPFish
   - MidWayPoint
   - StartWayPoint
+  - SceneManager
   layers:
   - Default
   - TransparentFX
