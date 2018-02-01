@@ -8,7 +8,7 @@ public class LandscapeSceneManager : MonoBehaviour {
     private int currentLandscape;
     private int previousLandscape; // keep track of previous, so can check if it's change since last frame
     public int[] activeLandscapes;
-    private int landscapeOffset;
+    private int totalOffset;
     private GameObject fish;
     private bool currentLandscapeHasChanged;
 
@@ -19,6 +19,7 @@ public class LandscapeSceneManager : MonoBehaviour {
 	void Start () {
         previousLandscape = 0;
         currentLandscape = 0;
+        totalOffset = 0;
         activeLandscapes = new int[] { -1, 0, 1 };
         currentLandscapeHasChanged = false;
         fish = GameObject.FindGameObjectWithTag("Fishy");
@@ -36,6 +37,9 @@ public class LandscapeSceneManager : MonoBehaviour {
         if (currentLandscapeHasChanged)
         {
             UpdateActiveLandscapes();
+            // reset for the next time
+            currentLandscapeHasChanged = false;
+            previousLandscape = currentLandscape;
         }
         // but modified by an offset. Add the offset amount to the number above.
         // should be also the one before, and the one after.
@@ -59,8 +63,40 @@ public class LandscapeSceneManager : MonoBehaviour {
         activeLandscapes[0] = currentLandscape - 1;
         activeLandscapes[1] = currentLandscape;
         activeLandscapes[2] = currentLandscape + 1;
+        for (int i = 0; i < activeLandscapes.Length; i++)
+        {
+            // TODO: check whether scene is already loaded. If not, then load it
+            LoadLandscape(activeLandscapes[i]);
+            EnableLandscape(); // ditto, also check first if enabled, and if not, then enable it
+        }
+        //TODO: Update lighting to match for the current scene
+        //Set the currentScene to be active scene (if it isn't already), so that its lightmaps are used
+    }
+
+    private void OffsetLandscapes(int offsetAmount) 
+    {
+        // keep track of the total offset
+        totalOffset += offsetAmount;
+        // Loop through current scenes, and offset them by the correct amount
+    }
+
+    private void LoadLandscape(int landscapeID)
+    {
+        
+    }
+
+    private void EnableLandscape()
+    {
+        // Check for correct offset before enabling
     }
 }
+/***************Strategy******************
+ *Async load scenes within 2 of the center, current scene, but with game objects not active. So 5 scenes at a time
+ *Make one scene before and after active, so 3 active scenes at a time
+ *check whether this scheme 1. displays the scenes by the time they are needed (no gaps in the view)
+ *and 2. circumvents noticable freezing/pausing while loading/enabling
+ *Initially, add scenes to build manually.
+ *Eventually, automatically add scenes from a folder of scenes (because there will be a lot of them)
 // To add scenes to build automatically by script:
 // from: https://answers.unity.com/questions/1212383/add-scenes-to-build-through-script.html
 /*
