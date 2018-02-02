@@ -18,6 +18,7 @@ TagManager:
   - MidWayPoint
   - StartWayPoint
   - SceneManager
+  - GameManager
   layers:
   - Default
   - TransparentFX

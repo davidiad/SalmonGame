@@ -11,12 +11,16 @@ public class LandscapeSceneManager : MonoBehaviour {
     private int totalOffset;
     private GameObject fish;
     private bool currentLandscapeHasChanged;
+    private GameObject gameManager;
+    private SceneLoaderAsync sceneLoader;
 
     // Init an array that will hold all the landscape scenes, whether loaded or unloaded
     Scene[] landscapeScenes; // may need to be an array of integers, or of strings (names), rather thean Scene's. Can you store a scene into an array
     // or should you store the names, to access them.
 
-	void Start () {
+	void Awake () {
+        gameManager = GameObject.FindGameObjectWithTag("GameManager");
+        sceneLoader = gameManager.GetComponent<SceneLoaderAsync>();
         previousLandscape = 0;
         currentLandscape = 0;
         totalOffset = 0;
@@ -26,9 +30,14 @@ public class LandscapeSceneManager : MonoBehaviour {
         // Populate the landscapesScenes array
         // Set up a folder containing all these scenes, and populate by name and or number (order)
         // Assuming for now that all scenes are sequentially numbered, and in a straight line
-
 	    	
 	}
+
+    void Start() 
+    {
+            sceneLoader.LoadScenes();
+
+    }
 	
 	void Update () {
         // Check the position of the player fish
