@@ -162,7 +162,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 1deff9a26e55d41b1ad94e8efedfa2e9, type: 3}
       propertyPath: m_Layer
-      value: 11
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 1deff9a26e55d41b1ad94e8efedfa2e9, type: 3}
       propertyPath: m_CastShadows
@@ -183,6 +183,10 @@ Prefab:
     - target: {fileID: 400000, guid: 1deff9a26e55d41b1ad94e8efedfa2e9, type: 3}
       propertyPath: m_LocalScale.z
       value: .5
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 1deff9a26e55d41b1ad94e8efedfa2e9, type: 3}
+      propertyPath: m_Layer
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1deff9a26e55d41b1ad94e8efedfa2e9, type: 3}
@@ -219,7 +223,7 @@ GameObject:
   - component: {fileID: 1625321515}
   - component: {fileID: 1625321514}
   - component: {fileID: 1625321513}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: TerrainS
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -289,7 +293,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 2030630619}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: landscapeParent
   m_TagString: Untagged
   m_Icon: {fileID: 0}

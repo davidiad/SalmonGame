@@ -192,6 +192,10 @@ Prefab:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 780611a67e8e941a2b3aa96e5915a793, type: 2}
+      propertyPath: m_Layer
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 780611a67e8e941a2b3aa96e5915a793, type: 2}
   m_IsPrefabParent: 0
@@ -298,6 +302,10 @@ Prefab:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 4300000, guid: 0440176d1dbb3461f965c743d4eb6721, type: 3}
+    - target: {fileID: 100000, guid: 780611a67e8e941a2b3aa96e5915a793, type: 2}
+      propertyPath: m_Layer
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 780611a67e8e941a2b3aa96e5915a793, type: 2}
   m_IsPrefabParent: 0
@@ -394,7 +402,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 10e6fc4a77bc840f8ba479ffb8d047b2, type: 3}
       propertyPath: m_Layer
-      value: 11
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 10e6fc4a77bc840f8ba479ffb8d047b2, type: 3}
       propertyPath: m_CastShadows
@@ -403,6 +411,10 @@ Prefab:
     - target: {fileID: 2300000, guid: 10e6fc4a77bc840f8ba479ffb8d047b2, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 10e6fc4a77bc840f8ba479ffb8d047b2, type: 3}
+      propertyPath: m_Layer
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 10e6fc4a77bc840f8ba479ffb8d047b2, type: 3}
@@ -437,7 +449,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1672453375}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: landscapeParent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -468,7 +480,7 @@ GameObject:
   - component: {fileID: 1705534482}
   - component: {fileID: 1705534481}
   - component: {fileID: 1705534480}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: WaterFallTerrain
   m_TagString: Untagged
   m_Icon: {fileID: 0}

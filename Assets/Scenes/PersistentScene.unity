@@ -565,6 +565,110 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &184013571
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 184013575}
+  - component: {fileID: 184013574}
+  - component: {fileID: 184013573}
+  - component: {fileID: 184013572}
+  m_Layer: 0
+  m_Name: FogVolumeCamera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &184013572
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 184013571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bef6df75502a394b8e5f87ee0b18263, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FogVolumeResolution: 
+  RT_FogVolume: {fileID: 0}
+  RT_FogVolumeR: {fileID: 0}
+  _Downsample: 4
+  ThisCamera: {fileID: 184013573}
+  SceneCamera: {fileID: 1051338370}
+  DepthMask:
+    serializedVersion: 2
+    m_Bits: 1
+  RT_Depth: {fileID: 0}
+  RT_DepthR: {fileID: 0}
+  upsampleDepthThreshold: 0.02
+  lowProfileDepthRT: []
+--- !u!20 &184013573
+Camera:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 184013571}
+  m_Enabled: 0
+  serializedVersion: 2
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 100
+  field of view: 60
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: 1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 0
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+--- !u!114 &184013574
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 184013571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff98ed9cca0747c45bfd307b759b2f55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SceneCamera: {fileID: 1051338370}
+  SecondaryCamera: {fileID: 184013573}
+--- !u!4 &184013575
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 184013571}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!28 &324862635
 Texture2D:
   m_ObjectHideFlags: 0
@@ -887,7 +991,7 @@ GameObject:
   - component: {fileID: 553726423}
   - component: {fileID: 553726422}
   - component: {fileID: 553726426}
-  m_Layer: 13
+  m_Layer: 14
   m_Name: jumpTrigger3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1077,7 +1181,7 @@ GameObject:
   - component: {fileID: 645591361}
   - component: {fileID: 645591360}
   - component: {fileID: 645591364}
-  m_Layer: 13
+  m_Layer: 14
   m_Name: jumpTrigger1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1213,7 +1317,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 742411662}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Waypoints
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1824,7 +1928,7 @@ MonoBehaviour:
   ShowBilateralEdge: 0
   USMode: 2
   ThisCamera: {fileID: 1051338370}
-  _FogVolumeCamera: {fileID: 0}
+  _FogVolumeCamera: {fileID: 184013572}
   upsampleDepthThreshold: 0.00187
   HDR: 1
   TAA: 0
@@ -1839,7 +1943,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1080647887}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: midWaypoint
   m_TagString: MidWayPoint
   m_Icon: {fileID: 0}
@@ -2145,7 +2249,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1125547432}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Triggers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2276,7 +2380,7 @@ GameObject:
   - component: {fileID: 1294752455}
   - component: {fileID: 1294752454}
   - component: {fileID: 1294752453}
-  m_Layer: 13
+  m_Layer: 14
   m_Name: jumpTrigger2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3624,7 +3728,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1803707279}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: NonPlayerFish
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3687,7 +3791,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1827255820}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: startWaypoint
   m_TagString: StartWayPoint
   m_Icon: {fileID: 0}
@@ -4000,7 +4104,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2093139290}
   - component: {fileID: 2093139289}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: NPFSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
