@@ -6,6 +6,7 @@ public class ObjectPool : MonoBehaviour
 
     PooledObject prefab;
     List<PooledObject> availableObjects = new List<PooledObject>();
+    //public int maxNumObjects = 23;
 
     public static ObjectPool GetPool (PooledObject prefab)
     {
@@ -36,11 +37,19 @@ public class ObjectPool : MonoBehaviour
             obj.gameObject.SetActive(true);
         }
         else {
-            obj = Instantiate<PooledObject>(prefab);
-            obj.transform.SetParent(transform, false);
-            obj.Pool = this;
+            //if (transform.childCount <= maxNumObjects)
+            //{
+                obj = Instantiate<PooledObject>(prefab);
+                obj.transform.SetParent(transform, false);
+                obj.Pool = this;
+            //}
+            //else
+            //{ // need to return some object, even if no new ones are allowed
+            //    obj = availableObjects[0];
+            //    obj.gameObject.SetActive(true);
+            //}
         }
-
+        Debug.Log("The # of NPFs is now: " + this.transform.childCount);
         return obj;
     }
 
